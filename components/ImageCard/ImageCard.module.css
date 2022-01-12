@@ -1,12 +1,18 @@
 .card {
   background-color: lightblue;
   margin: 5px;
-  width: 350px;
-  padding: 5px 0 5px 0;
+  width: 300px;
+  border-radius: 5px;
 }
 
-.image {
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+.image img {
+  border-radius: 5px;
+}
+
+.card h4, .card h5, .card p {
+  margin: 0 0 5px 2px;
+}
+
+.card p {
+  font-size: small;
 }
