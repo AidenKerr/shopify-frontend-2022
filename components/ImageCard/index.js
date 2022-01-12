@@ -18,7 +18,7 @@ export function ImageCard({ photo }) {
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image width={300} height={300} src={img_src} />
+        <Image width={300} height={300} src={img_src} alt={`Martian surface taken by the ${full_name} on ${name}`}/>
       </div>
       <h4>{full_name}</h4>
       <h5>By {name}</h5>
