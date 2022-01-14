@@ -9,10 +9,17 @@
   border-radius: 5px;
 }
 
-.card h4, .card h5, .card p {
+.card h4,
+.card h5,
+.card p {
   margin: 0 0 5px 2px;
 }
 
 .card p {
   font-size: small;
+}
+
+.info {
+  display: flex;
+  align-items: center;
 }
