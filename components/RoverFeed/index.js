@@ -37,7 +37,7 @@ const RoverOptionPanel = ({ setImages }) => {
 };
 
 export function RoverFeed() {
-  const [images, setImages] = useState({});
+  const [images, setImages] = useState([]);
 
   return (
     <>
