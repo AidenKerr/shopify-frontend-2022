@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import styles from "./LikeButton.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export function LikeButton({ id }) {
   const [isLiked, setIsLiked] = useState(() => {
@@ -11,17 +11,22 @@ export function LikeButton({ id }) {
     return likedJSON || false;
   });
 
-  useEffect(() => {
-    localStorage.setItem(id, isLiked);
-  }, [isLiked]);
+  const onLike = () =>
+    setIsLiked((prevLiked) => {
+      if (prevLiked) {
+        localStorage.removeItem(id);
+      } else {
+        localStorage.setItem(id, "true");
+      }
 
-  const alternateLike = () => setIsLiked((prevLiked) => !prevLiked);
+      return !prevLiked;
+    });
 
   const likeIcon = isLiked ? faHeartSolid : faHeart;
 
   return (
     <div className={styles.like}>
-      <button aria-label="like" onClick={alternateLike}>
+      <button aria-label="like" onClick={onLike}>
         <FontAwesomeIcon icon={likeIcon} />
       </button>
     </div>
