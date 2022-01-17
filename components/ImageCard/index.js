@@ -11,28 +11,20 @@ const getDate = (dateStr) => {
 export function ImageCard({ image }) {
   if (!image) return null; // todo change to loading cards
 
-  const { id, img_src, rover, earth_date, camera } = image || {};
-  const { name } = rover || {};
-  const { full_name } = camera || {};
+  const { src, id, title, by, date, alt } = image || {};
 
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image
-          width={300}
-          height={300}
-          objectFit="cover"
-          src={img_src}
-          alt={`Martian surface taken by the ${full_name} on ${name}`}
-        />
+        <Image width={300} height={300} objectFit="cover" src={src} alt={alt} />
       </div>
       <div className={styles.info}>
         <LikeButton id={id} />
         <div>
-          <h4>{full_name}</h4>
-          <h5>By {name}</h5>
+          <h4>{title}</h4>
+          <h5>By {by}</h5>
           <p>
-            <time dateTime={earth_date}>{getDate(earth_date)}</time>
+            <time dateTime={date}>{getDate(date)}</time>
           </p>
         </div>
       </div>
