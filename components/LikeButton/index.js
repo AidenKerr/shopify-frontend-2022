@@ -26,7 +26,11 @@ export function LikeButton({ id }) {
 
   return (
     <div className={styles.like}>
-      <button aria-label="like" onClick={onLike}>
+      <button
+        aria-label="like"
+        onClick={onLike}
+        aria-label={isLiked ? "Liked" : "Not Liked"}
+      >
         <FontAwesomeIcon icon={likeIcon} />
       </button>
     </div>

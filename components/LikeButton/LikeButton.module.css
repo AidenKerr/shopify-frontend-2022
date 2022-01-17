@@ -12,3 +12,8 @@
   font-size: 30px;
   color: #555;
 }
+
+.like svg {
+  width: 1em;
+  height: 1em;
+}
