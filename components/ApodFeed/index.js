@@ -3,8 +3,8 @@ import { useState } from "react";
 import { getPhotos } from "./utils";
 
 const ApodOptionPanel = ({ setImages }) => {
-  const [start, setStart] = useState(1);
-  const [end, setEnd] = useState(1);
+  const [start, setStart] = useState("2000-02-10");
+  const [end, setEnd] = useState("2000-02-20");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +20,7 @@ const ApodOptionPanel = ({ setImages }) => {
         type="date"
         required
         onChange={(e) => setStart(e.target.value)}
+        defaultValue={start}
         pattern="\d{4}-\d{2}-\d{2}"
       />
       <label htmlFor="page">End: </label>
@@ -29,6 +30,7 @@ const ApodOptionPanel = ({ setImages }) => {
         type="date"
         required
         onChange={(e) => setEnd(e.target.value)}
+        defaultValue={end}
         pattern="\d{4}-\d{2}-\d{2}"
       />
       <button type="submit">View Results</button>
