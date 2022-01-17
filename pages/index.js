@@ -1,8 +1,8 @@
 import Head from "next/head";
-import { ImageFeed } from "../components/ImageFeed";
+import { RoverFeed } from "../components/RoverFeed";
 import styles from "../styles/Home.module.css";
 
-export default function Home({ test }) {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -14,7 +14,7 @@ export default function Home({ test }) {
       <main className={styles.main}>
         <h1 className={styles.title}>Spacestagram</h1>
         <h2>Image-sharing from the final frontier</h2>
-        <ImageFeed />
+        <RoverFeed />
       </main>
 
       <footer className={styles.footer}>By Aiden Kerr</footer>

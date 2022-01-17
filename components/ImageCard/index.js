@@ -8,10 +8,10 @@ const getDate = (dateStr) => {
   return date.toLocaleDateString("en-US", options);
 };
 
-export function ImageCard({ photo }) {
-  if (!photo) return null; // todo change to loading cards
+export function ImageCard({ image }) {
+  if (!image) return null; // todo change to loading cards
 
-  const { id, img_src, rover, earth_date, camera } = photo || {};
+  const { id, img_src, rover, earth_date, camera } = image || {};
   const { name } = rover || {};
   const { full_name } = camera || {};
 
@@ -21,6 +21,7 @@ export function ImageCard({ photo }) {
         <Image
           width={300}
           height={300}
+          objectFit="cover"
           src={img_src}
           alt={`Martian surface taken by the ${full_name} on ${name}`}
         />
