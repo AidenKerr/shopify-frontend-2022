@@ -30,6 +30,6 @@ const format = (img) => {
     title: full_name,
     by: rover,
     date: img.earth_date,
-    alt: `Martian surface taken by the ${full_name} Camera on ${rover}`,
+    alt: `Martian surface taken by the ${full_name} on ${rover}`,
   };
 };

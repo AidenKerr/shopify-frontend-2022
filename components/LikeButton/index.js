@@ -25,14 +25,13 @@ export function LikeButton({ id }) {
   const likeIcon = isLiked ? faHeartSolid : faHeart;
 
   return (
-    <div className={styles.like}>
-      <button
-        aria-label="like"
-        onClick={onLike}
-        aria-label={isLiked ? "Liked" : "Not Liked"}
-      >
-        <FontAwesomeIcon icon={likeIcon} />
-      </button>
-    </div>
+    <button
+      className={styles.like}
+      aria-label="like"
+      onClick={onLike}
+      aria-label={isLiked ? "Liked" : "Not Liked"}
+    >
+      <FontAwesomeIcon icon={likeIcon} />
+    </button>
   );
 }

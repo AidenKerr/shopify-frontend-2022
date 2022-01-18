@@ -16,15 +16,32 @@ export function ImageCard({ image }) {
   return (
     <div className={styles.card}>
       <div className={styles.image}>
-        <Image width={300} height={300} objectFit="cover" src={src} alt={alt} />
+        <Image
+          width={300}
+          height={300}
+          objectFit="cover"
+          src={src}
+          alt={alt}
+          tabIndex={0}
+        />
       </div>
       <div className={styles.info}>
-        <LikeButton id={id} />
+          <LikeButton id={id} />
         <div>
-          <h4>{title}</h4>
-          <h5>By {by}</h5>
+          <p
+            className={styles.title}
+            tabIndex={0}
+            aria-label={`title: ${title}`}
+          >
+            {title}
+          </p>
+          <p className={styles.author} tabIndex={0}>
+            By {by}
+          </p>
           <p>
-            <time dateTime={date}>{getDate(date)}</time>
+            <time dateTime={date} tabIndex={0}>
+              {getDate(date)}
+            </time>
           </p>
         </div>
       </div>

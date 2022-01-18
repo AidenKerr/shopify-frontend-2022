@@ -1,11 +1,11 @@
-.like button {
+.like {
   border: none;
   background-color: transparent;
   cursor: pointer;
   font-size: 30px;
 }
 
-.like button:hover {
+.like:hover {
   border: none;
   background-color: transparent;
   cursor: pointer;
