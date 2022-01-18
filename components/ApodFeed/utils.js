@@ -31,7 +31,7 @@ const format = (img) => {
     src: img.url,
     id: img.url,
     title: img.title,
-    by: img.copyright,
+    by: img.copyright || 'unknown',
     date: img.date,
     alt: "Astronomy photo of the day",
   };
