@@ -1,6 +1,6 @@
 export const getPhotos = (sol, page, setImages) => {
   // todo move to env variables
-  const key = 'n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC';
+  const key = process.env.NEXT_PUBLIC_API_KEY;
   fetch(
     `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}&page=${page}&api_key=${key}`
   )

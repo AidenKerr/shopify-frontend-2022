@@ -1,6 +1,6 @@
 export const getPhotos = (start, end, setImages) => {
   // todo move to env variables
-  const key = 'n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC';
+  const key = process.env.NEXT_PUBLIC_API_KEY;
   fetch(
     `https://api.nasa.gov/planetary/apod?start_date=${start}&end_date=${end}&api_key=${key}`
   )
