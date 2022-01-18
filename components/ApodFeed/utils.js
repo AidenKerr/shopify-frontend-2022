@@ -11,7 +11,7 @@ export const getPhotos = (start, end, setImages) => {
     })
     .then((data) => {
       const formatted = data
-        .filter((img) => excludeInvalidURL(img))
+        .filter((img) => isValidType(img))
         .map((img) => format(img));
       setImages(formatted);
     })
@@ -20,7 +20,7 @@ export const getPhotos = (start, end, setImages) => {
     });
 };
 
-const excludeInvalidURL = (img) => {
+const isValidType = (img) => {
   return img.media_type === 'image';
 };
 
