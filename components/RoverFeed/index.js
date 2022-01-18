@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { getPhotos } from './utils';
 
 const RoverOptionPanel = ({ setImages }) => {
-  const [sol, setSol] = useState(1);
+  const [sol, setSol] = useState(1000);
   const [page, setPage] = useState(1);
 
   const handleSubmit = (e) => {
