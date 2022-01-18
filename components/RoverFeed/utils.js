@@ -13,7 +13,6 @@ export const getPhotos = (sol, page, setImages) => {
     .then((data) => {
       const formatted = data.photos.map((img) => format(img));
       setImages(formatted);
-      console.log('set images');
     })
     .catch((error) => {
       console.error(error);

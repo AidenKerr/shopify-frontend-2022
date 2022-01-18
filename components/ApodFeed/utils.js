@@ -15,7 +15,6 @@ export const getPhotos = (start, end, setImages) => {
         .filter((img) => excludeInvalidURL(img))
         .map((img) => format(img));
       setImages(formatted);
-      console.log('set images');
     })
     .catch((error) => {
       console.error(error);
