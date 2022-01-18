@@ -27,7 +27,6 @@ export function LikeButton({ id }) {
   return (
     <button
       className={styles.like}
-      aria-label="like"
       onClick={onLike}
       aria-label={isLiked ? 'Liked' : 'Not Liked'}
     >
