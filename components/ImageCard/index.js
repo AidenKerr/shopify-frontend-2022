@@ -9,8 +9,6 @@ const getDate = (dateStr) => {
 };
 
 export function ImageCard({ image }) {
-  if (!image) return null; // todo change to loading cards
-
   const { src, id, title, by, date, alt } = image || {};
 
   return (
