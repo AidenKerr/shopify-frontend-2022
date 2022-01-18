@@ -18,7 +18,7 @@ const RoverOptionPanel = ({ setImages }) => {
         id="sol"
         name="sol"
         type="text"
-        defaultValue={1}
+        defaultValue={1000}
         required
         onChange={(e) => setSol(parseInt(e.target.value))}
       />
