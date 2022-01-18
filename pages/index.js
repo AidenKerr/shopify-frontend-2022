@@ -1,6 +1,6 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
-import { RoverFeed } from "../components/RoverFeed";
+import Link from 'next/link';
+import Layout from '../components/Layout';
+import { RoverFeed } from '../components/RoverFeed';
 
 export default function Home() {
   return (

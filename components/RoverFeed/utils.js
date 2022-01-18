@@ -1,6 +1,6 @@
 export const getPhotos = (sol, page, setImages) => {
   // todo move to env variables
-  const key = "n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC";
+  const key = 'n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC';
   fetch(
     `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=${sol}&page=${page}&api_key=${key}`
   )
@@ -13,7 +13,7 @@ export const getPhotos = (sol, page, setImages) => {
     .then((data) => {
       const formatted = data.photos.map((img) => format(img));
       setImages(formatted);
-      console.log("set images");
+      console.log('set images');
     })
     .catch((error) => {
       console.error(error);

@@ -1,11 +1,11 @@
-import Image from "next/image";
-import styles from "./ImageCard.module.css";
-import { LikeButton } from "../LikeButton";
+import Image from 'next/image';
+import styles from './ImageCard.module.css';
+import { LikeButton } from '../LikeButton';
 
 const getDate = (dateStr) => {
   const date = new Date(dateStr);
-  const options = { year: "numeric", month: "long", day: "numeric" };
-  return date.toLocaleDateString("en-US", options);
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return date.toLocaleDateString('en-US', options);
 };
 
 export function ImageCard({ image }) {
@@ -26,7 +26,7 @@ export function ImageCard({ image }) {
         />
       </div>
       <div className={styles.info}>
-          <LikeButton id={id} />
+        <LikeButton id={id} />
         <div>
           <p
             className={styles.title}

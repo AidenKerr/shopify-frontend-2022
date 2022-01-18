@@ -1,5 +1,5 @@
-import Layout from "../../components/Layout";
-import { RoverFeed } from "../../components/RoverFeed";
+import Layout from '../../components/Layout';
+import { RoverFeed } from '../../components/RoverFeed';
 
 export default function Rover() {
   return (

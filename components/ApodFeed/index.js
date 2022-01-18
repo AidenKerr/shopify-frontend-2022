@@ -1,10 +1,10 @@
-import { ImageFeed } from "../ImageFeed";
-import { useState } from "react";
-import { getPhotos } from "./utils";
+import { ImageFeed } from '../ImageFeed';
+import { useState } from 'react';
+import { getPhotos } from './utils';
 
 const ApodOptionPanel = ({ setImages }) => {
-  const [start, setStart] = useState("2022-01-03");
-  const [end, setEnd] = useState("2022-01-16");
+  const [start, setStart] = useState('2022-01-03');
+  const [end, setEnd] = useState('2022-01-16');
 
   const handleSubmit = (e) => {
     e.preventDefault();

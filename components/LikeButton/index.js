@@ -1,8 +1,8 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart as faHeartSolid } from "@fortawesome/free-solid-svg-icons";
-import { faHeart } from "@fortawesome/free-regular-svg-icons";
-import styles from "./LikeButton.module.css";
-import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as faHeartSolid } from '@fortawesome/free-solid-svg-icons';
+import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import styles from './LikeButton.module.css';
+import { useState } from 'react';
 
 export function LikeButton({ id }) {
   const [isLiked, setIsLiked] = useState(() => {
@@ -16,7 +16,7 @@ export function LikeButton({ id }) {
       if (prevLiked) {
         localStorage.removeItem(id);
       } else {
-        localStorage.setItem(id, "true");
+        localStorage.setItem(id, 'true');
       }
 
       return !prevLiked;
@@ -29,7 +29,7 @@ export function LikeButton({ id }) {
       className={styles.like}
       aria-label="like"
       onClick={onLike}
-      aria-label={isLiked ? "Liked" : "Not Liked"}
+      aria-label={isLiked ? 'Liked' : 'Not Liked'}
     >
       <FontAwesomeIcon icon={likeIcon} />
     </button>

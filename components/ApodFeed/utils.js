@@ -1,6 +1,6 @@
 export const getPhotos = (start, end, setImages) => {
   // todo move to env variables
-  const key = "n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC";
+  const key = 'n8Tn91dkpKCXx1cLHb6BFmBTqjcWdaWJHoVOwADC';
   fetch(
     `https://api.nasa.gov/planetary/apod?start_date=${start}&end_date=${end}&api_key=${key}`
   )
@@ -15,7 +15,7 @@ export const getPhotos = (start, end, setImages) => {
         .filter((img) => excludeInvalidURL(img))
         .map((img) => format(img));
       setImages(formatted);
-      console.log("set images");
+      console.log('set images');
     })
     .catch((error) => {
       console.error(error);
@@ -23,7 +23,7 @@ export const getPhotos = (start, end, setImages) => {
 };
 
 const excludeInvalidURL = (img) => {
-  return img.media_type === "image";
+  return img.media_type === 'image';
 };
 
 const format = (img) => {
@@ -33,6 +33,6 @@ const format = (img) => {
     title: img.title,
     by: img.copyright || 'unknown',
     date: img.date,
-    alt: "Astronomy photo of the day",
+    alt: 'Astronomy photo of the day',
   };
 };

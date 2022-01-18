@@ -1,6 +1,6 @@
-import { ImageFeed } from "../ImageFeed";
-import { useState } from "react";
-import { getPhotos } from "./utils";
+import { ImageFeed } from '../ImageFeed';
+import { useState } from 'react';
+import { getPhotos } from './utils';
 
 const RoverOptionPanel = ({ setImages }) => {
   const [sol, setSol] = useState(1);
