@@ -1,5 +1,7 @@
 # Shopify Frontend
 
+Try it here: https://shopify-frontend-2022.vercel.app/
+
 I wanted to design the image feed in a way that would make it easily reusable. New feeds can be created by creating a wrapper component that supplies the data in the correct format. As an example, I created two wrappers, which you can select on the front page.
 
 The wrappers allowed me to have unique control panels, API calls, and functions to format data. This could be improved if it were written in TypeScript, or at least had property annotations, so that it is clear to the developer how they can use it.
