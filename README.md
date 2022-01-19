@@ -1,3 +1,18 @@
+# Shopify Frontend
+
+I wanted to design the image feed in a way that would make it easily reusable. New feeds can be created by creating a wrapper component that supplies the data in the correct format. As an example, I created two wrappers, which you can select on the front page.
+
+The wrappers allowed me to have unique control panels, API calls, and functions to format data. This could be improved if it were written in TypeScript, or at least had property annotations, so that it is clear to the developer how they can use it.
+
+For the likes saving feature, I initially set it up to save the "liked" state for every single post. I realized quickly how much this would pollute the local storage, so now it only saves the posts that are actually liked.
+
+I designed my website so that the page could be navigated with tabs in a way that made sense. I also used semantic HTML and aria attributes to improve accessibility.
+
+There's still more that could be done to improve this application.
+For example, the API fetching method could be improved. Currently there is a memory leak if the component unmounts before the data is returned. This could be solved with a useEffect cleanup function.
+Another improvement would be generating URLs for different control panel options, so image feeds can be shared directly. 
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
